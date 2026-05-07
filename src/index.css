@@ -1,0 +1,29 @@
+@import 'styles/base.css';
+@import 'styles/home.css';
+@import 'styles/header.css';
+@import 'styles/cards.css';
+@import 'styles/details.css';
+@import 'styles/episodes.css';
+@import 'styles/skeleton.css';
+
+/* Footer & Main Message Styles (if not elsewhere) */
+.status-message {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.main-footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--glass-border);
+    margin-top: auto;
+}
+
+.main-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}

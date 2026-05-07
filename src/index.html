@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Explorer | Modern Cinema Dashboard</title>
+    <meta name="description" content="Explora tus series favoritas, temporadas y episodios con una interfaz moderna y minimalista.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <h1 class="logo" id="logo-link">TV<span>Explorer</span></h1>
+            <form id="search-form" class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar series..." autocomplete="off">
+                <button type="submit" id="search-button">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home/Hero Section -->
+        <section id="home-section" class="home-hero fade-in">
+            <div class="hero-content">
+                <h2 class="hero-title">Descubre tu próxima <span>serie favorita</span></h2>
+                <p class="hero-subtitle">Explora miles de programas, temporadas y episodios con datos en tiempo real.</p>
+                <div class="hero-search-hint">Usa el buscador arriba para comenzar tu viaje.</div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="results-grid hidden"></section>
+
+        <!-- Detail Section (Hidden by default) -->
+        <section id="detail-section" class="detail-view hidden">
+            <button id="back-button" class="back-button">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Volver
+            </button>
+            <div id="detail-content"></div>
+        </section>
+
+        <!-- Messages / States -->
+        <div id="status-message" class="status-message"></div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 TV Explorer. Datos proporcionados por <a href="https://www.tvmaze.com/api" target="_blank">TVMaze API</a>.</p>
+    </footer>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

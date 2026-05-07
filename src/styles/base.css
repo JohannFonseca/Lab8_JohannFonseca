@@ -1,0 +1,79 @@
+:root {
+    /* Colors */
+    --bg-dark: #0f1014;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --bg-header: rgba(15, 16, 20, 0.8);
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --accent: #4a90e2;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    /* Rating Colors */
+    --rating-0: #2b0a27;
+    --rating-1: #451010;
+    --rating-2: #922323;
+    --rating-3: #c53030;
+    --rating-4: #c53030;
+    --rating-5: #c53030;
+    --rating-6: #dd6b20;
+    --rating-7: #f6e05e;
+    --rating-8: #48bb78;
+    --rating-9: #2f855a;
+    --rating-10: #4CAF50;
+
+    /* Transitions */
+    --smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rating-0 { --color: #2b0a27; }
+.rating-1 { --color: #451010; }
+.rating-2 { --color: #922323; }
+.rating-3 { --color: #c53030; }
+.rating-4 { --color: #c53030; }
+.rating-5 { --color: #c53030; }
+.rating-6 { --color: #dd6b20; }
+.rating-7 { --color: #f6e05e; color: #333; }
+.rating-8 { --color: #48bb78; }
+.rating-9 { --color: #2f855a; }
+.rating-10 { --color: #4CAF50; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+.hidden { display: none !important; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}

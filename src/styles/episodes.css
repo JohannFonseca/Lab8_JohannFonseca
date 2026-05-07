@@ -1,0 +1,103 @@
+.seasons-section {
+    margin-top: 50px;
+}
+
+.seasons-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--accent);
+    padding-left: 15px;
+}
+
+.seasons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.episodes {
+    display: grid;
+    place-items: start;
+    place-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* User Requested Styles */
+.season {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    background: var(--bg-card);
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    width: 100%;
+}
+
+.season-header,
+.episode {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+    background: var(--color, var(--bg-card));
+    display: grid;
+    place-items: center;
+    margin: 2px;
+    border-radius: 25px;
+    /* corner-shape: squircle; */ /* Non-standard, but kept as reference */
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+    transition: var(--smooth);
+}
+
+.season-header {
+    background: var(--accent);
+    font-weight: 800;
+}
+
+.episode:hover {
+    transform: scale(1.2);
+    z-index: 10;
+    box-shadow: 0 0 15px var(--color);
+}
+
+/* Tooltip (reusing from previous version) */
+.episode-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background: #1a202c;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 180px;
+    font-size: 0.75rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: var(--smooth);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid var(--glass-border);
+    z-index: 100;
+    text-align: left;
+}
+
+.episode:hover .episode-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* Custom scrollbar for seasons */
+.season::-webkit-scrollbar {
+    height: 4px;
+}
+.season::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 10px;
+}
