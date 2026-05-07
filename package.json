@@ -2,9 +2,9 @@
   "name": "tv-shows-app",
   "version": "1.0.0",
   "description": "Modern TV Show Explorer using TVMaze API",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "npx serve src"
+    "start": "npx serve ."
   },
   "keywords": [],
   "author": "Johann Fonseca",
